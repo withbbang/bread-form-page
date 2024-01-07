@@ -19,7 +19,7 @@
 ### 프로젝트 구조
 
 ```
-Create React App Boilerplate for Typescript
+Bread-Form-Page
 ├─ 📁config
 │  ├─ 📁jest
 │  │  ├─ 📄babelTransform.js
