@@ -19,13 +19,14 @@ import {
 /**
  * [API 상태 코드에 따른 에러 발생 함수]
  *
- * 상태코드, 에러 메세지, 에러팝업 콜백 함수 담고 있는 파라미터 객체
+ * 상태코드, 에러 메세지, 에러팝업 콜백, 팝업 확인 버튼 콜백을 담고 있는 파라미터 객체
  * @param {TypeThrowErrorInAPI} parameters
  */
 export function handleThrowErrorInAPI({
   status,
   message,
   failCb,
+  errorPopupBtnCb,
 }: TypeThrowErrorInAPI) {
   failCb?.();
   switch (status) {
@@ -55,13 +56,14 @@ export function handleThrowErrorInAPI({
 /**
  * [Status Code는 정상이지만 서버 로직에 의한 에러 발생 함수]
  *
- * 코드, 에러 메세지, 에러팝업 콜백 함수 담고 있는 파라미터 객체
+ * 코드, 에러 메세지, 에러팝업 콜백, 팝업 확인 버튼 콜백을 담고 있는 파라미터 객체
  * @param {TypeThrowErrorInAPI} parameters
  */
 export function handleThrowCustomErrorInAPI({
   code,
   message,
   failCb,
+  errorPopupBtnCb,
 }: TypeThrowCustomErrorInAPI) {
   failCb?.();
   // TODO: 코드에 따라 switch case 분기 필요

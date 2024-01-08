@@ -16,11 +16,13 @@ export interface CustomWindow extends Window {
  * @type {number} status: 상태코드
  * @type {string | undefined} message: 메세지
  * @type {Function | undefined} failCb: API 실패시 바로 실행하는 콜백
+ * @type {Function | undefined} errorPopupBtnCb: 팝업 확인 버튼 콜백
  */
 export interface TypeThrowErrorInAPI {
   status: number;
   message?: string;
   failCb?: () => any;
+  errorPopupBtnCb?: () => any;
 }
 
 /**
@@ -29,11 +31,13 @@ export interface TypeThrowErrorInAPI {
  * @type {string} code: 결과 코드
  * @type {string | undefined} message: 메세지
  * @type {Function | undefined} failCb: API 실패시 바로 실행하는 콜백
+ * @type {Function | undefined} errorPopupBtnCb: 팝업 확인 버튼 콜백
  */
 export interface TypeThrowCustomErrorInAPI {
   code: string;
   message: string;
   failCb?: () => any;
+  errorPopupBtnCb?: () => any;
 }
 
 /**
