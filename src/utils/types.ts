@@ -111,6 +111,9 @@ export interface TypeJavascriptInterface {
   data?: any;
 }
 
+/**
+ * 일반 SVG들 변환 파일의 props
+ */
 export interface SVGProps {
   type?: string;
   width?: string;
