@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import SVG from 'modules/SVG';
+import SVG from 'utils/SVG';
 import styles from './NotFound.module.scss';
 
 function NotFound({}: NotFoundProps): React.JSX.Element {

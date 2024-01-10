@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 import { CommonState } from 'middlewares/reduxToolkits/commonSlice';
 import { CustomWindow } from 'utils/types';
 import { usePostDataByConfirmPopupHook } from 'utils/customHooks';
-import IndexPT from './IndexPT';
+import FormPT from './FormPT';
 
-function IndexCT({}: IndexCTProps): React.JSX.Element {
+function FormCT({}: FormCTProps): React.JSX.Element {
   const { useSetActivePostDataByConfirmPopup } =
     usePostDataByConfirmPopupHook();
   const onClick = () => {
@@ -37,9 +37,9 @@ function IndexCT({}: IndexCTProps): React.JSX.Element {
     console.warn('onResult visit?', data);
   };
 
-  return <IndexPT onClick={onClick} />;
+  return <FormPT onClick={onClick} />;
 }
 
-interface IndexCTProps extends CommonState {}
+interface FormCTProps extends CommonState {}
 
-export default IndexCT;
+export default FormCT;
